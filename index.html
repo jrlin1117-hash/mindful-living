@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>正念生活实验室</title>
+    <title>正念小森林</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,234 +13,126 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="ambient ambient-left"></div>
-    <div class="ambient ambient-right"></div>
+    <div class="mist mist-top"></div>
+    <div class="mist mist-bottom"></div>
 
     <header class="site-header">
-      <div class="brand">
-        <span class="brand-mark">Mindful Pantry</span>
-        <h1>正念生活实验室</h1>
+      <div>
+        <p class="brand-mark">Mindful Forest</p>
+        <h1>正念小森林</h1>
       </div>
-      <nav>
-        <a href="#today">今日练习</a>
-        <a href="#attitudes">九态度</a>
-        <a href="#calendar">日历</a>
-        <a href="#blueprint">产品蓝图</a>
-      </nav>
+      <a class="header-link" href="#forest">进入森林</a>
     </header>
 
-    <main>
-      <section class="hero section-card">
-        <div class="hero-copy">
-          <p class="eyebrow">把正念变成今天就能做的一件小事</p>
-          <h2>给生活加一点觉察，像加一味恰到好处的调味料。</h2>
-          <p class="hero-text">
-            这个网页不是教你“理解正念”，而是每天陪你在真实生活里练习它。今天的态度、今天的任务、今天的一句记录，会慢慢把正念带进吃饭、走路、工作、相处和独处之中。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#today">开始今日练习</a>
-            <a class="button button-secondary" href="#blueprint">查看产品设计</a>
-          </div>
-        </div>
-        <div class="hero-panel">
-          <p class="panel-label">今日呼吸</p>
-          <div class="breath-orbit">
-            <div class="breath-core"></div>
-          </div>
-          <p class="panel-note">吸气 4 秒，停留 2 秒，呼气 6 秒。先让自己抵达此刻。</p>
+    <main class="page-shell">
+      <section class="hero-card">
+        <p class="eyebrow">给九种正念态度一片可以慢慢长大的地方</p>
+        <h2>先走进森林，再照看今天最需要被浇灌的一株植物。</h2>
+        <p class="hero-text">
+          在这里，非评判、耐心、接纳与感恩不再只是概念，而是一棵树、一枝花、一株草。你每天可以走进森林看看它们的生长，也可以抽一张今日态度卡，或者留出一段正式冥想时间。
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#forest">森林入口</a>
+          <a class="button button-secondary" href="#today-card">抽今日态度</a>
         </div>
       </section>
 
-      <section id="today" class="section-grid">
-        <article class="section-card spotlight-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">今日正念态度</p>
-              <h3 id="attitude-name">加载中</h3>
-            </div>
-            <button class="icon-button" id="refresh-attitude" aria-label="刷新今日态度">
-              换一道调味
-            </button>
-          </div>
-          <p id="attitude-tagline" class="lead"></p>
-          <div class="info-stack">
-            <div>
-              <span class="info-label">今天怎么融入生活</span>
-              <p id="attitude-practice"></p>
-            </div>
-            <div>
-              <span class="info-label">3 分钟行动</span>
-              <p id="attitude-action"></p>
-            </div>
-          </div>
-        </article>
-
-        <article class="section-card spotlight-card accent-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">今日正念生活任务</p>
-              <h3 id="task-name">加载中</h3>
-            </div>
-            <button class="icon-button" id="draw-task">抽取任务</button>
-          </div>
-          <p id="task-scene" class="lead"></p>
-          <div class="info-stack">
-            <div>
-              <span class="info-label">任务引导</span>
-              <p id="task-guide"></p>
-            </div>
-            <div>
-              <span class="info-label">完成后问自己</span>
-              <p id="task-reflection"></p>
-            </div>
-          </div>
-          <button class="button button-primary full-width" id="complete-task">完成今天的练习</button>
-          <p class="completion-message" id="completion-message" aria-live="polite"></p>
-        </article>
-      </section>
-
-      <section class="section-grid">
-        <article class="section-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">按当下状态进入</p>
-              <h3>心情匹配推荐</h3>
-            </div>
-          </div>
-          <div class="mood-options" id="mood-options"></div>
-          <div class="mood-result" id="mood-result">
-            选择一个你此刻更接近的状态，网页会给你一个更合适的练习入口。
-          </div>
-        </article>
-
-        <article class="section-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">一句停留</p>
-              <h3>正念记录本</h3>
-            </div>
-          </div>
-          <label class="info-label" for="journal-entry">今天你真正注意到的一件事</label>
-          <textarea
-            id="journal-entry"
-            rows="5"
-            placeholder="比如：我发现自己总是在拿起手机前先屏住了呼吸。"
-          ></textarea>
-          <div class="journal-actions">
-            <button class="button button-secondary" id="save-journal">保存记录</button>
-            <span id="journal-status" class="subtle-text"></span>
-          </div>
-        </article>
-      </section>
-
-      <section id="attitudes" class="section-card">
-        <div class="card-header">
+      <section id="forest" class="section-card forest-card">
+        <div class="section-heading">
           <div>
-            <p class="eyebrow">九种生活调味</p>
-            <h3>卡巴金正念九态度</h3>
+            <p class="eyebrow">森林入口</p>
+            <h3>九个态度的生长情况</h3>
+          </div>
+          <p class="section-note">点开一株植物，看它代表的正念态度、寓意和今天的练习方式。</p>
+        </div>
+
+        <div class="forest-grid" id="forest-grid"></div>
+
+        <article class="growth-panel" id="growth-panel">
+          <div class="growth-visual" id="growth-visual"></div>
+          <div class="growth-copy">
+            <p class="eyebrow" id="growth-stage">森林观察</p>
+            <h4 id="growth-title">请选择一株植物</h4>
+            <p id="growth-summary" class="growth-summary">
+              轻点上面的植物卡片，查看它代表的正念态度、花语寓意和你今天可以如何照看它。
+            </p>
+            <div class="growth-details">
+              <div>
+                <span class="detail-label">植物寓意</span>
+                <p id="growth-meaning">每一种植物都对应一种生活中的练习姿态。</p>
+              </div>
+              <div>
+                <span class="detail-label">今日浇灌方式</span>
+                <p id="growth-practice">把态度从理解变成一个当下动作，它才会真的长出来。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="today-card" class="section-card draw-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">今日要浇灌的态度卡</p>
+            <h3>随机抽取今天的正念植物</h3>
+          </div>
+          <button id="draw-attitude" class="button button-primary" type="button">抽一张卡</button>
+        </div>
+
+        <article class="today-attitude-card" id="today-attitude-card">
+          <div class="plant-backdrop" id="plant-backdrop"></div>
+          <div class="today-attitude-copy">
+            <p class="eyebrow" id="today-plant">今日植物</p>
+            <h4 id="today-attitude-name">等待抽卡</h4>
+            <p id="today-attitude-line" class="growth-summary">
+              点一下按钮，让今天的森林为你送来一株最适合被浇灌的植物。
+            </p>
+            <div class="growth-details">
+              <div>
+                <span class="detail-label">一句简介</span>
+                <p id="today-attitude-intro">每一种态度，都可以成为你今天看待生活的一种方式。</p>
+              </div>
+              <div>
+                <span class="detail-label">行动建议</span>
+                <p id="today-attitude-action">抽卡后，这里会出现一个轻量、具体、可以立刻去做的正念动作。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="meditation" class="section-card timer-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">正式正念冥想练习</p>
+            <h3>给自己留一段安静的计时练习</h3>
           </div>
         </div>
-        <div class="attitude-grid" id="attitude-grid"></div>
-      </section>
 
-      <section class="section-card">
-        <div class="card-header">
-          <div>
-            <p class="eyebrow">生活场景练习库</p>
-            <h3>让正念进入一天的真实流动</h3>
+        <div class="timer-shell">
+          <div class="timer-ring">
+            <div class="timer-inner">
+              <span class="timer-label">剩余时间</span>
+              <strong id="timer-display">05:00</strong>
+            </div>
           </div>
-        </div>
-        <div class="scene-grid" id="scene-grid"></div>
-      </section>
 
-      <section id="calendar" class="section-grid">
-        <article class="section-card calendar-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">练习足迹</p>
-              <h3 id="calendar-title">本月正念日历</h3>
+          <div class="timer-controls">
+            <div class="preset-row">
+              <button class="preset active" data-seconds="300" type="button">5 分钟</button>
+              <button class="preset" data-seconds="600" type="button">10 分钟</button>
+              <button class="preset" data-seconds="900" type="button">15 分钟</button>
             </div>
-          </div>
-          <div class="calendar-weekdays" id="calendar-weekdays"></div>
-          <div class="calendar-grid" id="calendar-grid"></div>
-        </article>
-
-        <article class="section-card">
-          <div class="card-header">
-            <div>
-              <p class="eyebrow">为什么它会持续被使用</p>
-              <h3>产品核心闭环</h3>
+            <div class="action-row">
+              <button id="start-timer" class="button button-primary" type="button">开始</button>
+              <button id="pause-timer" class="button button-secondary" type="button">暂停</button>
+              <button id="reset-timer" class="button button-secondary" type="button">重置</button>
             </div>
-          </div>
-          <div class="loop-steps">
-            <div>
-              <span class="loop-index">01</span>
-              <p>看见今天的一个态度，把抽象理念变成具体提醒。</p>
-            </div>
-            <div>
-              <span class="loop-index">02</span>
-              <p>完成一个很小但真实的生活任务，练习不再停留在概念里。</p>
-            </div>
-            <div>
-              <span class="loop-index">03</span>
-              <p>留下一句记录和一枚日历足迹，慢慢看到自己的生活变化。</p>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="blueprint" class="section-card">
-        <div class="card-header">
-          <div>
-            <p class="eyebrow">产品方案</p>
-            <h3>网站信息架构与后续功能建议</h3>
-          </div>
-        </div>
-        <div class="blueprint-grid">
-          <div>
-            <h4>主页面</h4>
-            <ul>
-              <li>首页：今日态度、今日任务、情绪入口、记录入口</li>
-              <li>九态度页：解释、误区、生活案例、对应练习</li>
-              <li>练习库：按场景、时长、心情筛选</li>
-              <li>正念日历：足迹、关键词、连续节奏</li>
-              <li>我的记录：个人观察、情绪变化、偏好任务</li>
-            </ul>
-          </div>
-          <div>
-            <h4>适合新增的功能</h4>
-            <ul>
-              <li>30 秒到 2 分钟的音频引导，让新手更容易进入状态</li>
-              <li>按“起床、通勤、工作前、睡前”切换的情境化入口</li>
-              <li>每周主题，例如“这一周练习非评判”</li>
-              <li>轻量社群机制，例如匿名分享今天的觉察句子</li>
-              <li>个性化推荐，根据近 7 天的状态和任务完成情况调整内容</li>
-            </ul>
-          </div>
-          <div>
-            <h4>MVP 首发建议</h4>
-            <ul>
-              <li>今日正念态度卡</li>
-              <li>今日任务抽取</li>
-              <li>一句记录 + 本月日历</li>
-              <li>九态度基础内容页</li>
-            </ul>
-          </div>
-          <div>
-            <h4>视觉与气质</h4>
-            <ul>
-              <li>像自然手帐，不像打卡工具</li>
-              <li>强调呼吸感、停顿感、留白和柔和层次</li>
-              <li>避免 KPI 式成就系统，保留温柔陪伴感</li>
-            </ul>
+            <p id="timer-status" class="timer-status">给自己一个不需要完成什么的时段，只是坐下来呼吸。</p>
           </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <p>正念生活实验室 · 让练习从坐垫走向每一天的真实生活。</p>
-    </footer>
 
     <script src="./script.js"></script>
   </body>

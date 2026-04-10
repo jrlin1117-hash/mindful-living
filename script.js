@@ -1,344 +1,269 @@
 const attitudes = [
   {
+    id: "non-judging",
     name: "非评判",
-    tagline: "今天先不急着给体验贴标签，只去感受它本来的样子。",
-    practice: "当情绪、声音或他人的反应出现时，先把“好/坏、对/错”放到一边，给体验几秒钟的原样空间。",
-    action: "喝第一口水时，只感受温度、流动和停留，不评价它是否够好喝。"
+    plant: "梅花",
+    icon: "梅",
+    stage: "含苞",
+    summary: "像寒冬里先开的梅花，不急着评论天气，只安静地盛开。",
+    meaning: "梅花常被视为坚韧与清明。它提醒我们在情绪和评价出现时，不马上跟随判断，而是保留一份清醒。",
+    intro: "今天先不急着给一切贴标签，只让经验先以它本来的样子出现。",
+    practice: "当你想说“这太糟了”或“我又做不好”时，先停一停，只描述事实，不加结论。",
+    action: "下一次拿起手机前，先感受一口呼吸，再决定自己是否真的要打开它。",
+    gradient: "linear-gradient(135deg, #dfe6cf, #f2d7d7)"
   },
   {
+    id: "patience",
     name: "耐心",
-    tagline: "允许事情按它自己的节奏展开，不催促当下。",
-    practice: "当你等电梯、等回复、等水烧开时，不立刻掏手机，把等待变成呼吸练习。",
-    action: "今天挑一个排队或等待时刻，默数 5 次呼吸。"
+    plant: "竹",
+    icon: "竹",
+    stage: "抽节",
+    summary: "竹子不会催自己长高，它一节一节地完成自己的时间。",
+    meaning: "竹常象征节律、韧性与从容。它代表耐心不是拖延，而是信任成长有它的节拍。",
+    intro: "不催促结果出现，先陪伴过程慢慢展开。",
+    practice: "把等待电梯、排队、加载页面的时间，变成呼吸和身体感受的时间。",
+    action: "今天挑一个等待时刻，安静数 5 次呼吸，不用手机填满空隙。",
+    gradient: "linear-gradient(135deg, #d5e7c4, #bfd7a2)"
   },
   {
+    id: "beginners-mind",
     name: "初学者之心",
-    tagline: "像第一次那样看待熟悉的日常，世界会重新打开。",
-    practice: "把每天最熟悉的一件事当成第一次做，留意以前忽略的小细节。",
-    action: "去看一朵花、一片叶子或一只杯子，观察颜色、纹理和光线停留 2 分钟。"
+    plant: "雏菊",
+    icon: "菊",
+    stage: "初开",
+    summary: "像雏菊一样轻盈地重新看见熟悉的日常，世界会变新。",
+    meaning: "雏菊常带着纯真与新的开始。它提醒我们把熟悉的东西也当作第一次遇见。",
+    intro: "暂时放下“我早就知道了”，给生活一点重新发现的空间。",
+    practice: "用第一次看见的目光观察一个常见物件，像第一次遇见它一样。",
+    action: "看一片叶子 2 分钟，只观察颜色、纹理和边缘，不急着说出它的名字。",
+    gradient: "linear-gradient(135deg, #f4ecd2, #e7f4cf)"
   },
   {
+    id: "trust",
     name: "信任",
-    tagline: "练习信任身体、直觉和真实经验，而不是一直向外寻找标准答案。",
-    practice: "当你想立刻确认“我做得对不对”时，先问自己：我身体此刻真正需要什么？",
-    action: "今天在一个小决定里，先停 10 秒，感受身体的倾向再行动。"
+    plant: "松树",
+    icon: "松",
+    stage: "扎根",
+    summary: "松树先把根扎稳，再静静向上，不急着向外证明。",
+    meaning: "松树象征稳定和内在力量。它对应的是对身体、经验与内心判断的信任。",
+    intro: "不总向外确认自己对不对，先听一听身体真正的感觉。",
+    practice: "面对一个小选择时，先感受身体是收紧还是舒展，再决定怎么做。",
+    action: "今天做一个小决定前，先安静停 10 秒，再行动。",
+    gradient: "linear-gradient(135deg, #c7dcc6, #b5c79e)"
   },
   {
+    id: "non-striving",
     name: "不争",
-    tagline: "不把每一刻都变成要优化、要证明、要达成的目标。",
-    practice: "允许今天有一个时刻只是存在，不需要产出、不需要表现。",
-    action: "留出 3 分钟坐着看窗外，不听课、不刷手机、不安排任务。"
+    plant: "苔藓",
+    icon: "苔",
+    stage: "铺展",
+    summary: "苔藓不争光、不争高，却能在安静处完整地铺展开来。",
+    meaning: "苔藓提醒我们，生命不是每时每刻都要表现和竞争。有些时刻，只是存在就已经足够。",
+    intro: "不把每一个瞬间都变成需要优化和完成的任务。",
+    practice: "留一小段时间，不学习、不工作、不刷消息，只单纯地坐着或看窗外。",
+    action: "给自己 3 分钟，只是坐着呼吸，不追求任何状态。",
+    gradient: "linear-gradient(135deg, #c8dcc5, #dbe6c8)"
   },
   {
+    id: "acceptance",
     name: "接纳",
-    tagline: "如实看见此刻已经发生的样子，是改变真正开始的地方。",
-    practice: "如果今天疲惫、心烦或分心，不先责备，先承认：是的，我现在就是这样。",
-    action: "把你此刻最明显的身体感受写成一句事实描述，不解释。"
+    plant: "莲",
+    icon: "莲",
+    stage: "舒展",
+    summary: "莲花从水面安静展开，像在说：先如实看见，再慢慢打开。",
+    meaning: "莲常被赋予澄明与包容。它提醒我们先承认此刻真实存在的状态，而不是急着排斥。",
+    intro: "我现在就是这样，这不是失败，而是练习开始的地方。",
+    practice: "当疲惫、烦躁或分心出现时，先说一句：我注意到我现在正在这样。",
+    action: "把你此刻最明显的身体感受写成一句事实，比如“胸口有点紧”。",
+    gradient: "linear-gradient(135deg, #e9d7dc, #f1ecce)"
   },
   {
+    id: "letting-go",
     name: "放下",
-    tagline: "松开那些已经抓得太紧的念头，让心有回旋的空间。",
-    practice: "当你发现自己反复想着一件事，轻轻说一句“我注意到我又抓住它了”，然后把注意带回身体。",
-    action: "今天做一次肩膀放松练习，呼气时有意识地下沉肩膀。"
+    plant: "柳树",
+    icon: "柳",
+    stage: "摇曳",
+    summary: "柳枝会顺着风放松下来，不把每一阵风都抓住。",
+    meaning: "柳树的柔软与下垂感，很适合代表松手与流动。放下不是放弃，而是不再死抓。",
+    intro: "发现自己又紧紧抓住一个念头时，轻轻把它放回风里。",
+    practice: "当反复想同一件事时，把注意力带回脚底和呼吸，而不是继续追着想。",
+    action: "做一次肩膀放松，呼气时有意识地让肩膀往下沉。",
+    gradient: "linear-gradient(135deg, #cfe1c7, #dfe9b7)"
   },
   {
+    id: "gratitude",
     name: "感恩",
-    tagline: "把习以为常的事重新看见，日常就会重新发光。",
-    practice: "留意今天一个平常却支持着你的存在，比如一顿饭、一束光、一句问候。",
-    action: "晚上记下今天最值得感谢的一件小事。"
+    plant: "桂花",
+    icon: "桂",
+    stage: "飘香",
+    summary: "桂花不张扬，却总在靠近时让人突然闻见生活里的好。",
+    meaning: "桂花常象征温暖、丰盈与被看见的日常福气。它代表对平常事物重新生出珍惜。",
+    intro: "重新留意那些一直支持着你、却常被忽略的小事。",
+    practice: "今天留意一个习以为常却在支持你的存在，比如一顿饭、一盏灯、一次陪伴。",
+    action: "晚上写下一件今天值得感谢的小事，哪怕只是一阵风。",
+    gradient: "linear-gradient(135deg, #f0e3bf, #dfe8be)"
   },
   {
+    id: "generosity",
     name: "慷慨",
-    tagline: "把温柔和善意分一点给别人，也分一点给自己。",
-    practice: "在日常互动里，多给别人半秒钟倾听，也给自己少一点苛责。",
-    action: "今天对一个人说一句真诚而具体的感谢，或对自己说一句温柔的话。"
+    plant: "向日葵",
+    icon: "葵",
+    stage: "向光",
+    summary: "向日葵总把脸转向光，也把明亮带给周围的人。",
+    meaning: "向日葵适合代表善意、温暖和分享。慷慨不仅给别人，也包括对自己的温柔。",
+    intro: "把一点善意分给别人，也分给今天的自己。",
+    practice: "在一段对话里多听半分钟，在一次自责里少苛刻一点。",
+    action: "今天向一个人表达一次具体感谢，或对自己说一句温柔的话。",
+    gradient: "linear-gradient(135deg, #f2d990, #dbe8a5)"
   }
 ];
 
-const tasks = [
-  {
-    name: "正念赏花",
-    scene: "适合在散步、通勤或经过一棵树时完成",
-    guide: "停下来，看一朵花或一片叶子。不要立刻叫出它的名字，先看颜色、边缘、形状和光影。",
-    reflection: "我真正看见了什么，是平时会被我忽略的？"
-  },
-  {
-    name: "正念走路 10 分钟",
-    scene: "适合去食堂、下楼取快递或饭后散步时完成",
-    guide: "放慢一点步伐，感受脚掌接触地面的顺序，注意摆臂、呼吸和周围声音。",
-    reflection: "当我慢下来时，身体和情绪有什么变化？"
-  },
-  {
-    name: "正念吃一餐",
-    scene: "适合早餐或今天任意一顿饭",
-    guide: "第一口先不要看手机，留意食物的温度、气味、咀嚼和吞咽过程。",
-    reflection: "我通常吃饭时最容易忽略什么？"
-  },
-  {
-    name: "正念洗手",
-    scene: "适合洗手间里的 30 秒微练习",
-    guide: "把水流、温度、手心与手背的触感都当作练习对象，让这 30 秒完整属于你。",
-    reflection: "这么短的停留，能不能也成为一种回到当下的方式？"
-  },
-  {
-    name: "正念整理桌面",
-    scene: "适合工作开始前或结束后",
-    guide: "只整理一个小区域，感受拿起、放下、归位，不把它变成必须高效完成的任务。",
-    reflection: "当空间被整理时，我的内在空间有变化吗？"
-  },
-  {
-    name: "正念倾听",
-    scene: "适合今天和任何一个人对话时",
-    guide: "对方说话时，不急着想回应。先听声音、节奏、停顿和情绪，再开口。",
-    reflection: "今天的倾听里，我少了一点什么惯性，多了一点什么空间？"
-  },
-  {
-    name: "正念等红灯",
-    scene: "适合通勤、过马路或等车时",
-    guide: "红灯亮起的这几十秒，不刷手机。感受脚底、风、周围人流和自己呼吸。",
-    reflection: "等待有没有可能不是浪费，而是一种恢复？"
-  },
-  {
-    name: "正念听声音",
-    scene: "适合打开窗户或坐在室内时",
-    guide: "闭眼 1 分钟，只听声音的远近、高低、停顿和消失，不追随内容。",
-    reflection: "今天有哪些声音原来一直都在，只是我没听见？"
-  }
-];
+const forestGrid = document.querySelector("#forest-grid");
+const growthVisual = document.querySelector("#growth-visual");
+const growthStage = document.querySelector("#growth-stage");
+const growthTitle = document.querySelector("#growth-title");
+const growthSummary = document.querySelector("#growth-summary");
+const growthMeaning = document.querySelector("#growth-meaning");
+const growthPractice = document.querySelector("#growth-practice");
+const plantBackdrop = document.querySelector("#plant-backdrop");
+const todayPlant = document.querySelector("#today-plant");
+const todayAttitudeName = document.querySelector("#today-attitude-name");
+const todayAttitudeLine = document.querySelector("#today-attitude-line");
+const todayAttitudeIntro = document.querySelector("#today-attitude-intro");
+const todayAttitudeAction = document.querySelector("#today-attitude-action");
 
-const sceneLibrary = [
-  { title: "起床时", label: "1 分钟", body: "睁眼后先不碰手机，感受身体重量、被子的触感和第一口呼吸。" },
-  { title: "通勤中", label: "3 分钟", body: "把一段路变成脚步练习，注意节奏、视线和城市里的颜色。" },
-  { title: "工作前", label: "2 分钟", body: "开始任务前先坐定，确认身体是否紧绷，再温柔地放松肩颈。" },
-  { title: "吃饭时", label: "5 分钟", body: "把前几口饭吃慢一点，让味觉而不是信息流占据注意。" },
-  { title: "情绪起伏时", label: "90 秒", body: "先命名身体感觉，再决定是否要处理事情，而不是直接跟着反应走。" },
-  { title: "睡前", label: "3 分钟", body: "回想今天真正注意到的一件小事，让它成为一天的落点。" }
-];
+const timerDisplay = document.querySelector("#timer-display");
+const timerStatus = document.querySelector("#timer-status");
+const presetButtons = document.querySelectorAll(".preset");
+const startButton = document.querySelector("#start-timer");
+const pauseButton = document.querySelector("#pause-timer");
+const resetButton = document.querySelector("#reset-timer");
 
-const moodPresets = [
-  {
-    mood: "焦虑",
-    answer: "试试“接纳 + 正念洗手”。先不要立刻解决全部问题，让身体先回到一个可以呼吸的位置。"
-  },
-  {
-    mood: "很忙",
-    answer: "试试“不争 + 正念等红灯”。你不需要把每一秒都利用起来，留白会让效率更稳。"
-  },
-  {
-    mood: "心烦",
-    answer: "试试“非评判 + 正念听声音”。先减少解释和内心评论，让感官接手几分钟。"
-  },
-  {
-    mood: "提不起劲",
-    answer: "试试“感恩 + 正念赏花”。从一个具体、美的细节重新点亮注意力。"
-  },
-  {
-    mood: "平静",
-    answer: "试试“初学者之心 + 正念走路”。在状态不错的时候，最适合把觉察练得更细致。"
-  },
-  {
-    mood: "想重新开始",
-    answer: "试试“信任 + 正念整理桌面”。从一个小范围的整理动作，重新建立和自己的连接。"
-  }
-];
+let selectedDuration = 300;
+let remainingSeconds = selectedDuration;
+let timerId = null;
 
-const weekdayNames = ["一", "二", "三", "四", "五", "六", "日"];
-const storageKeys = {
-  completed: "mindful-pantries-completed-days",
-  journal: "mindful-pantries-journal"
-};
-
-const attitudeName = document.querySelector("#attitude-name");
-const attitudeTagline = document.querySelector("#attitude-tagline");
-const attitudePractice = document.querySelector("#attitude-practice");
-const attitudeAction = document.querySelector("#attitude-action");
-const taskName = document.querySelector("#task-name");
-const taskScene = document.querySelector("#task-scene");
-const taskGuide = document.querySelector("#task-guide");
-const taskReflection = document.querySelector("#task-reflection");
-const completionMessage = document.querySelector("#completion-message");
-const moodOptions = document.querySelector("#mood-options");
-const moodResult = document.querySelector("#mood-result");
-const attitudeGrid = document.querySelector("#attitude-grid");
-const sceneGrid = document.querySelector("#scene-grid");
-const calendarWeekdays = document.querySelector("#calendar-weekdays");
-const calendarGrid = document.querySelector("#calendar-grid");
-const calendarTitle = document.querySelector("#calendar-title");
-const journalEntry = document.querySelector("#journal-entry");
-const journalStatus = document.querySelector("#journal-status");
-
-function getTodayKey() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = `${today.getMonth() + 1}`.padStart(2, "0");
-  const day = `${today.getDate()}`.padStart(2, "0");
-  return `${year}-${month}-${day}`;
+function updatePlantSurface(element, gradient) {
+  element.style.setProperty("--plant-gradient", gradient);
 }
 
-function getIndexFromDate(total) {
-  const today = new Date();
-  return (today.getDate() + today.getMonth() * 3 + today.getFullYear()) % total;
+function showAttitude(attitude) {
+  growthStage.textContent = `生长阶段 · ${attitude.stage}`;
+  growthTitle.textContent = `${attitude.name} · ${attitude.plant}`;
+  growthSummary.textContent = attitude.summary;
+  growthMeaning.textContent = attitude.meaning;
+  growthPractice.textContent = attitude.practice;
+  updatePlantSurface(growthVisual, attitude.gradient);
 }
 
-function renderDailyAttitude(index = getIndexFromDate(attitudes.length)) {
-  const item = attitudes[index];
-  attitudeName.textContent = item.name;
-  attitudeTagline.textContent = item.tagline;
-  attitudePractice.textContent = item.practice;
-  attitudeAction.textContent = item.action;
-}
+function renderForest() {
+  forestGrid.innerHTML = "";
 
-function renderDailyTask(index = getIndexFromDate(tasks.length)) {
-  const item = tasks[index];
-  taskName.textContent = item.name;
-  taskScene.textContent = item.scene;
-  taskGuide.textContent = item.guide;
-  taskReflection.textContent = item.reflection;
-}
-
-function renderMoodOptions() {
-  moodPresets.forEach((preset, index) => {
+  attitudes.forEach((attitude, index) => {
     const button = document.createElement("button");
-    button.className = "mood-chip";
     button.type = "button";
-    button.textContent = preset.mood;
+    button.className = "forest-node";
+    button.innerHTML = `
+      <div class="plant-icon">${attitude.icon}</div>
+      <strong>${attitude.name}</strong>
+      <span>${attitude.plant}</span>
+    `;
+
+    updatePlantSurface(button.querySelector(".plant-icon"), attitude.gradient);
+
     button.addEventListener("click", () => {
-      document.querySelectorAll(".mood-chip").forEach((chip) => chip.classList.remove("active"));
+      document.querySelectorAll(".forest-node").forEach((node) => node.classList.remove("active"));
       button.classList.add("active");
-      moodResult.textContent = preset.answer;
+      showAttitude(attitude);
     });
 
     if (index === 0) {
       button.classList.add("active");
-      moodResult.textContent = preset.answer;
+      showAttitude(attitude);
     }
 
-    moodOptions.appendChild(button);
+    forestGrid.appendChild(button);
   });
 }
 
-function renderAttitudeGrid() {
-  attitudes.forEach((item) => {
-    const tile = document.createElement("article");
-    tile.className = "attitude-tile";
-    tile.innerHTML = `
-      <h4>${item.name}</h4>
-      <p>${item.tagline}</p>
-    `;
-    attitudeGrid.appendChild(tile);
-  });
+function drawTodayAttitude() {
+  const attitude = attitudes[Math.floor(Math.random() * attitudes.length)];
+  todayPlant.textContent = `今日植物 · ${attitude.plant}`;
+  todayAttitudeName.textContent = attitude.name;
+  todayAttitudeLine.textContent = attitude.summary;
+  todayAttitudeIntro.textContent = attitude.intro;
+  todayAttitudeAction.textContent = attitude.action;
+  updatePlantSurface(plantBackdrop, attitude.gradient);
 }
 
-function renderSceneGrid() {
-  sceneLibrary.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "scene-card";
-    card.innerHTML = `
-      <span>${item.label}</span>
-      <h4>${item.title}</h4>
-      <p>${item.body}</p>
-    `;
-    sceneGrid.appendChild(card);
-  });
+function formatTime(totalSeconds) {
+  const minutes = Math.floor(totalSeconds / 60)
+    .toString()
+    .padStart(2, "0");
+  const seconds = (totalSeconds % 60).toString().padStart(2, "0");
+  return `${minutes}:${seconds}`;
 }
 
-function getCompletedDays() {
-  return JSON.parse(localStorage.getItem(storageKeys.completed) || "[]");
+function refreshTimerDisplay() {
+  timerDisplay.textContent = formatTime(remainingSeconds);
 }
 
-function saveCompletedDay() {
-  const current = new Set(getCompletedDays());
-  current.add(getTodayKey());
-  localStorage.setItem(storageKeys.completed, JSON.stringify([...current]));
-}
-
-function renderCalendar() {
-  calendarWeekdays.innerHTML = "";
-  calendarGrid.innerHTML = "";
-
-  weekdayNames.forEach((day) => {
-    const label = document.createElement("div");
-    label.textContent = day;
-    calendarWeekdays.appendChild(label);
-  });
-
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth();
-  const firstDay = new Date(year, month, 1);
-  const lastDate = new Date(year, month + 1, 0).getDate();
-  const startOffset = (firstDay.getDay() + 6) % 7;
-  const completed = new Set(getCompletedDays());
-  const journalMap = JSON.parse(localStorage.getItem(storageKeys.journal) || "{}");
-
-  calendarTitle.textContent = `${year} 年 ${month + 1} 月正念日历`;
-
-  for (let index = 0; index < startOffset; index += 1) {
-    const empty = document.createElement("div");
-    empty.className = "day-cell empty";
-    calendarGrid.appendChild(empty);
-  }
-
-  for (let day = 1; day <= lastDate; day += 1) {
-    const dateKey = `${year}-${`${month + 1}`.padStart(2, "0")}-${`${day}`.padStart(2, "0")}`;
-    const cell = document.createElement("div");
-    cell.className = "day-cell";
-
-    if (completed.has(dateKey)) {
-      cell.classList.add("completed");
-    }
-
-    const note = journalMap[dateKey] ? `${journalMap[dateKey].slice(0, 18)}${journalMap[dateKey].length > 18 ? "..." : ""}` : "留白也算练习";
-    cell.innerHTML = `
-      <div class="day-number">${day}</div>
-      <div class="day-note">${note}</div>
-    `;
-    calendarGrid.appendChild(cell);
+function stopTimer() {
+  if (timerId) {
+    clearInterval(timerId);
+    timerId = null;
   }
 }
 
-function saveJournal() {
-  const value = journalEntry.value.trim();
-
-  if (!value) {
-    journalStatus.textContent = "写下一句今天真正注意到的事，再保存。";
+function startTimer() {
+  if (timerId) {
     return;
   }
 
-  const current = JSON.parse(localStorage.getItem(storageKeys.journal) || "{}");
-  current[getTodayKey()] = value;
-  localStorage.setItem(storageKeys.journal, JSON.stringify(current));
-  journalStatus.textContent = "已保存。今天的观察已经留在你的日历里。";
-  renderCalendar();
+  timerStatus.textContent = "让呼吸自然来去，不用追求平静，只需要留在这里。";
+
+  timerId = window.setInterval(() => {
+    if (remainingSeconds > 0) {
+      remainingSeconds -= 1;
+      refreshTimerDisplay();
+      return;
+    }
+
+    stopTimer();
+    timerStatus.textContent = "这一段冥想已经完成。先别急着起身，感觉一下此刻的身体。";
+  }, 1000);
 }
 
-function loadJournalForToday() {
-  const current = JSON.parse(localStorage.getItem(storageKeys.journal) || "{}");
-  journalEntry.value = current[getTodayKey()] || "";
+function pauseTimer() {
+  stopTimer();
+  timerStatus.textContent = "计时已暂停。你可以继续，也可以就这样安静坐一会儿。";
 }
 
-document.querySelector("#refresh-attitude").addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * attitudes.length);
-  renderDailyAttitude(randomIndex);
+function resetTimer() {
+  stopTimer();
+  remainingSeconds = selectedDuration;
+  refreshTimerDisplay();
+  timerStatus.textContent = "给自己一个不需要完成什么的时段，只是坐下来呼吸。";
+}
+
+document.querySelector("#draw-attitude").addEventListener("click", drawTodayAttitude);
+
+presetButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    presetButtons.forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+    selectedDuration = Number(button.dataset.seconds);
+    remainingSeconds = selectedDuration;
+    refreshTimerDisplay();
+    stopTimer();
+    timerStatus.textContent = "时长已更新。找到一个舒服的姿势，准备开始。";
+  });
 });
 
-document.querySelector("#draw-task").addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * tasks.length);
-  renderDailyTask(randomIndex);
-});
+startButton.addEventListener("click", startTimer);
+pauseButton.addEventListener("click", pauseTimer);
+resetButton.addEventListener("click", resetTimer);
 
-document.querySelector("#complete-task").addEventListener("click", () => {
-  saveCompletedDay();
-  completionMessage.textContent = "今天的练习已放进你的日历足迹。做完之后，别忘了留下一句观察。";
-  renderCalendar();
-});
-
-document.querySelector("#save-journal").addEventListener("click", saveJournal);
-
-renderDailyAttitude();
-renderDailyTask();
-renderMoodOptions();
-renderAttitudeGrid();
-renderSceneGrid();
-loadJournalForToday();
-renderCalendar();
+renderForest();
+drawTodayAttitude();
+refreshTimerDisplay();
