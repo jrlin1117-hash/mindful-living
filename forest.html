@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>森林入口 - 正念小森林</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app">
+    <main class="page-shell">
+      <header class="card page-header-card">
+        <div class="header-row">
+          <div class="stack-sm">
+            <p class="eyebrow">Mindful Forest</p>
+            <h1 class="title-xl">森林入口</h1>
+            <p class="body-sm">练习越多，植物长得越好。每一株植物都对应一个正念态度，并带有 0-100 的正念值。</p>
+          </div>
+
+          <nav class="nav-row">
+            <a href="./index.html" class="btn btn-secondary btn-inline">首页</a>
+            <a href="./meditation.html" class="btn btn-secondary btn-inline">冥想练习</a>
+          </nav>
+        </div>
+      </header>
+
+      <section id="forest-grid" class="forest-grid"></section>
+
+      <section class="card detail-card">
+        <div class="detail-layout">
+          <div id="growth-visual" class="detail-cover"></div>
+          <div class="card-body stack-md">
+            <div class="stack-sm">
+              <p id="growth-stage" class="eyebrow text-muted">森林观察</p>
+              <h2 id="growth-title" class="title-lg">请选择一株植物</h2>
+              <p id="growth-summary" class="body-sm">点开上面的植物卡片，查看它当前的正念值、植物寓意和你今天可以如何照看它。</p>
+            </div>
+
+            <div class="stack-md">
+              <div class="stack-xs">
+                <span class="eyebrow text-muted">植物寓意</span>
+                <p id="growth-meaning" class="body-sm">每一种植物都对应一种生活中的练习姿态。</p>
+              </div>
+
+              <div class="stack-xs">
+                <span class="eyebrow text-muted">今日浇灌方式</span>
+                <p id="growth-practice" class="body-sm">把态度从理解变成一个当下动作，它才会真的长出来。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -4,135 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>正念小森林</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <div class="mist mist-top"></div>
-    <div class="mist mist-bottom"></div>
-
-    <header class="site-header">
-      <div>
-        <p class="brand-mark">Mindful Forest</p>
-        <h1>正念小森林</h1>
-      </div>
-      <a class="header-link" href="#forest">进入森林</a>
-    </header>
-
-    <main class="page-shell">
-      <section class="hero-card">
-        <p class="eyebrow">给九种正念态度一片可以慢慢长大的地方</p>
-        <h2>先走进森林，再照看今天最需要被浇灌的一株植物。</h2>
-        <p class="hero-text">
-          在这里，非评判、耐心、接纳与感恩不再只是概念，而是一棵树、一枝花、一株草。你每天可以走进森林看看它们的生长，也可以抽一张今日态度卡，或者留出一段正式冥想时间。
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#forest">森林入口</a>
-          <a class="button button-secondary" href="#today-card">抽今日态度</a>
-        </div>
-      </section>
-
-      <section id="forest" class="section-card forest-card">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">森林入口</p>
-            <h3>九个态度的生长情况</h3>
-          </div>
-          <p class="section-note">点开一株植物，看它代表的正念态度、寓意和今天的练习方式。</p>
+  <body class="app app-home">
+    <main class="page-center">
+      <section class="card home-card">
+        <div class="stack-lg text-center">
+          <p class="eyebrow">Mindful Forest</p>
+          <h1 class="title-xl">正念小森林</h1>
+          <p class="body-sm">
+            正念是一种生活态度。<br />
+            在日常里，种下觉察
+          </p>
         </div>
 
-        <div class="forest-grid" id="forest-grid"></div>
-
-        <article class="growth-panel" id="growth-panel">
-          <div class="growth-visual" id="growth-visual"></div>
-          <div class="growth-copy">
-            <p class="eyebrow" id="growth-stage">森林观察</p>
-            <h4 id="growth-title">请选择一株植物</h4>
-            <p id="growth-summary" class="growth-summary">
-              轻点上面的植物卡片，查看它代表的正念态度、花语寓意和你今天可以如何照看它。
-            </p>
-            <div class="growth-details">
-              <div>
-                <span class="detail-label">植物寓意</span>
-                <p id="growth-meaning">每一种植物都对应一种生活中的练习姿态。</p>
-              </div>
-              <div>
-                <span class="detail-label">今日浇灌方式</span>
-                <p id="growth-practice">把态度从理解变成一个当下动作，它才会真的长出来。</p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="today-card" class="section-card draw-card">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">今日要浇灌的态度卡</p>
-            <h3>随机抽取今天的正念植物</h3>
-          </div>
-          <button id="draw-attitude" class="button button-primary" type="button">抽一张卡</button>
-        </div>
-
-        <article class="today-attitude-card" id="today-attitude-card">
-          <div class="plant-backdrop" id="plant-backdrop"></div>
-          <div class="today-attitude-copy">
-            <p class="eyebrow" id="today-plant">今日植物</p>
-            <h4 id="today-attitude-name">等待抽卡</h4>
-            <p id="today-attitude-line" class="growth-summary">
-              点一下按钮，让今天的森林为你送来一株最适合被浇灌的植物。
-            </p>
-            <div class="growth-details">
-              <div>
-                <span class="detail-label">一句简介</span>
-                <p id="today-attitude-intro">每一种态度，都可以成为你今天看待生活的一种方式。</p>
-              </div>
-              <div>
-                <span class="detail-label">行动建议</span>
-                <p id="today-attitude-action">抽卡后，这里会出现一个轻量、具体、可以立刻去做的正念动作。</p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="meditation" class="section-card timer-card">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">正式正念冥想练习</p>
-            <h3>给自己留一段安静的计时练习</h3>
-          </div>
-        </div>
-
-        <div class="timer-shell">
-          <div class="timer-ring">
-            <div class="timer-inner">
-              <span class="timer-label">剩余时间</span>
-              <strong id="timer-display">05:00</strong>
-            </div>
-          </div>
-
-          <div class="timer-controls">
-            <div class="preset-row">
-              <button class="preset active" data-seconds="300" type="button">5 分钟</button>
-              <button class="preset" data-seconds="600" type="button">10 分钟</button>
-              <button class="preset" data-seconds="900" type="button">15 分钟</button>
-            </div>
-            <div class="action-row">
-              <button id="start-timer" class="button button-primary" type="button">开始</button>
-              <button id="pause-timer" class="button button-secondary" type="button">暂停</button>
-              <button id="reset-timer" class="button button-secondary" type="button">重置</button>
-            </div>
-            <p id="timer-status" class="timer-status">给自己一个不需要完成什么的时段，只是坐下来呼吸。</p>
-          </div>
+        <div class="stack-md">
+          <button id="draw-attitude" type="button" class="btn btn-primary">抽取今日态度卡</button>
+          <a href="./meditation.html" class="btn btn-secondary">冥想练习</a>
+          <a href="./forest.html" class="btn btn-secondary">进入森林</a>
         </div>
       </section>
     </main>
+
+    <dialog id="attitude-dialog" class="dialog-shell">
+      <article class="card dialog-card">
+        <div id="plant-backdrop" class="dialog-cover"></div>
+        <div class="card-body stack-md">
+          <div class="stack-sm">
+            <p id="today-plant" class="eyebrow text-muted">今日植物</p>
+            <h2 id="today-attitude-name" class="title-lg">等待抽卡</h2>
+            <p id="today-attitude-line" class="body-sm">森林正在为你准备今天的态度卡。</p>
+          </div>
+
+          <div class="stack-md">
+            <div class="stack-xs">
+              <span class="eyebrow text-muted">一句介绍</span>
+              <p id="today-attitude-intro" class="body-sm">每一种正念态度，都可以在今天的生活里找到一个落点。</p>
+            </div>
+
+            <div class="stack-xs">
+              <span class="eyebrow text-muted">行动建议</span>
+              <p id="today-attitude-action" class="body-sm">抽卡后，这里会出现一个轻量、具体、可以立刻开始的小练习。</p>
+            </div>
+          </div>
+
+          <button id="close-dialog" type="button" class="btn btn-secondary">收起卡片</button>
+        </div>
+      </article>
+    </dialog>
 
     <script src="./script.js"></script>
   </body>

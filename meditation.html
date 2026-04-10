@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冥想练习 - 正念小森林</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="app">
+    <main class="page-shell page-shell-narrow">
+      <header class="card page-header-card">
+        <div class="header-row">
+          <div class="stack-sm">
+            <p class="eyebrow">Mindful Forest</p>
+            <h1 class="title-xl">冥想练习</h1>
+            <p class="body-sm">给自己一段安静、不需要表现的时间。选择时长，坐定，呼吸，让这一段时间只属于你和此刻。</p>
+          </div>
+
+          <nav class="nav-row">
+            <a href="./index.html" class="btn btn-secondary btn-inline">首页</a>
+            <a href="./forest.html" class="btn btn-secondary btn-inline">进入森林</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="card timer-card">
+        <div class="timer-circle">
+          <div class="timer-inner">
+            <p class="eyebrow text-muted">剩余时间</p>
+            <strong id="timer-display" class="timer-display">05:00</strong>
+          </div>
+        </div>
+
+        <div class="stack-md">
+          <div class="pill-row">
+            <button class="preset preset-active" data-seconds="300" type="button">5 分钟</button>
+            <button class="preset" data-seconds="600" type="button">10 分钟</button>
+            <button class="preset" data-seconds="900" type="button">15 分钟</button>
+          </div>
+
+          <div class="button-grid">
+            <button id="start-timer" class="btn btn-primary" type="button">开始</button>
+            <button id="pause-timer" class="btn btn-secondary" type="button">暂停</button>
+            <button id="reset-timer" class="btn btn-secondary" type="button">重置</button>
+          </div>
+
+          <p id="timer-status" class="body-sm">给自己一个不需要完成什么的时段，只是坐下来呼吸。</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
