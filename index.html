@@ -7,23 +7,56 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="app app-home">
-    <main class="page-center">
-      <section class="card home-card">
-        <div class="stack-lg text-center">
-          <p class="eyebrow">Mindful Forest</p>
-          <h1 class="title-xl">正念小森林</h1>
-          <p class="body-sm">
-            正念是一种生活态度。<br />
-            在日常里，种下觉察
-          </p>
-        </div>
+    <main class="page-center brand-page">
+      <div class="home-layout">
+        <section class="brand-hero">
+          <div class="brand-hero-top">
+            <span class="brand-pill">MINDFUL FOREST</span>
+            <span class="brand-dot" aria-hidden="true"></span>
+          </div>
 
-        <div class="stack-md">
-          <button id="draw-attitude" type="button" class="btn btn-primary">抽取今日态度卡</button>
-          <a href="./meditation.html" class="btn btn-secondary">冥想练习</a>
-          <a href="./forest.html" class="btn btn-secondary">进入森林</a>
-        </div>
-      </section>
+          <div class="brand-title-block text-center">
+            <p class="brand-kicker">Daily gentle practice</p>
+            <h1 class="brand-title">正念小森林</h1>
+            <p class="brand-subtitle">
+              正念是一种生活态度。<br />
+              在日常里，种下觉察
+            </p>
+          </div>
+
+          <div class="home-action-row brand-actions">
+            <button id="draw-attitude" type="button" class="action-tile action-primary">
+              <span class="action-icon" aria-hidden="true">✦</span>
+              <span>抽卡</span>
+            </button>
+            <a href="./meditation.html" class="action-tile">
+              <span class="action-icon" aria-hidden="true">◯</span>
+              <span>冥想</span>
+            </a>
+            <a href="./forest.html" class="action-tile">
+              <span class="action-icon" aria-hidden="true">⌂</span>
+              <span>森林</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="card home-card calendar-card compact-home-calendar brand-calendar">
+          <div class="stack-md">
+            <div class="calendar-heading">
+              <button class="calendar-nav" type="button" aria-label="Previous month">‹</button>
+              <div class="text-center">
+                <p class="eyebrow">Practice Calendar</p>
+                <h2 id="calendar-title" class="title-lg">April 2026</h2>
+              </div>
+              <button class="calendar-nav" type="button" aria-label="Next month">›</button>
+            </div>
+
+            <div class="calendar-weekdays" id="calendar-weekdays"></div>
+            <div class="practice-calendar compact-calendar" id="practice-calendar"></div>
+            <div id="calendar-day-detail" class="calendar-day-detail body-sm">点选有记录的日期，查看当天练习。</div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <dialog id="attitude-dialog" class="dialog-shell">
@@ -48,7 +81,20 @@
             </div>
           </div>
 
-          <button id="close-dialog" type="button" class="btn btn-secondary">收起卡片</button>
+          <div class="stack-sm">
+            <label class="eyebrow text-muted" for="attitude-note">完成后的感受</label>
+            <textarea
+              id="attitude-note"
+              class="input-area"
+              rows="3"
+              placeholder="简单写一句：今天我注意到了什么？"
+            ></textarea>
+          </div>
+
+          <div class="button-grid">
+            <button id="complete-attitude" type="button" class="btn btn-primary">完成并记录，浇灌森林</button>
+            <button id="close-dialog" type="button" class="btn btn-secondary">收起卡片</button>
+          </div>
         </div>
       </article>
     </dialog>

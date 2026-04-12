@@ -8,24 +8,27 @@
   </head>
   <body class="app">
     <main class="page-shell">
-      <header class="card page-header-card">
-        <div class="header-row">
-          <div class="stack-sm">
-            <p class="eyebrow">Mindful Forest</p>
-            <h1 class="title-xl">森林入口</h1>
-            <p class="body-sm">练习越多，植物长得越好。每一株植物都对应一个正念态度，并带有 0-100 的正念值。</p>
-          </div>
-
-          <nav class="nav-row">
-            <a href="./index.html" class="btn btn-secondary btn-inline">首页</a>
-            <a href="./meditation.html" class="btn btn-secondary btn-inline">冥想练习</a>
-          </nav>
+      <header class="page-hero forest-page-hero">
+        <div class="brand-hero-top">
+          <span class="brand-pill">MINDFUL FOREST</span>
+          <span class="brand-dot" aria-hidden="true"></span>
         </div>
+
+        <div class="page-hero-copy">
+          <p class="brand-kicker">Growth garden</p>
+          <h1 class="page-hero-title">森林入口</h1>
+          <p class="page-hero-text">练习越多，植物长得越好。每一株植物都对应一个正念态度，并带有 0-100 的正念值。</p>
+        </div>
+
+        <nav class="hero-nav">
+          <a href="./index.html" class="mini-link">首页</a>
+          <a href="./meditation.html" class="mini-link">冥想练习</a>
+        </nav>
       </header>
 
       <section id="forest-grid" class="forest-grid"></section>
 
-      <section class="card detail-card">
+      <section class="card detail-card feature-card">
         <div class="detail-layout">
           <div id="growth-visual" class="detail-cover"></div>
           <div class="card-body stack-md">
@@ -49,6 +52,19 @@
           </div>
         </div>
       </section>
+
+      <section class="card page-header-card soft-section">
+        <div class="stack-md">
+          <div class="stack-sm">
+            <p class="eyebrow">Practice Journal</p>
+            <h2 class="title-lg">过往记录</h2>
+            <p class="body-sm">这里会汇总你完成的冥想练习和态度任务，包括日期、类型和记录内容。</p>
+          </div>
+
+          <div id="record-list" class="record-list"></div>
+        </div>
+      </section>
+
     </main>
 
     <script src="./script.js"></script>
