@@ -3,101 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>正念小森林</title>
+    <title>MIED挑战性任务</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="app app-home">
-    <main class="page-center brand-page">
-      <div class="home-layout">
-        <section class="brand-hero">
-          <div class="brand-hero-top">
-            <span class="brand-pill">MINDFUL FOREST</span>
-            <span class="brand-dot" aria-hidden="true"></span>
+  <body class="challenge-app">
+    <main class="challenge-page">
+      <header class="challenge-header">
+        <p class="challenge-kicker">PARTY CHALLENGE</p>
+        <h1>MIED挑战性任务</h1>
+        <p class="challenge-subtitle">社恐大挑战</p>
+      </header>
+
+      <section class="challenge-stage" aria-label="挑战转盘">
+        <div class="wheel-wrap">
+          <div class="wheel-pointer" aria-hidden="true"></div>
+
+          <div id="challenge-wheel" class="challenge-wheel" aria-live="polite">
+            <div id="wheel-labels" class="wheel-labels"></div>
           </div>
-
-          <div class="brand-title-block text-center">
-            <p class="brand-kicker">Daily gentle practice</p>
-            <h1 class="brand-title">正念小森林</h1>
-            <p class="brand-subtitle">
-              正念是一种生活态度。<br />
-              在日常里，种下觉察
-            </p>
-          </div>
-
-          <div class="home-action-row brand-actions">
-            <button id="draw-attitude" type="button" class="action-tile action-primary">
-              <span class="action-icon" aria-hidden="true">✦</span>
-              <span>抽卡</span>
-            </button>
-            <a href="./meditation.html" class="action-tile">
-              <span class="action-icon" aria-hidden="true">◯</span>
-              <span>冥想</span>
-            </a>
-            <a href="./forest.html" class="action-tile">
-              <span class="action-icon" aria-hidden="true">⌂</span>
-              <span>森林</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="card home-card calendar-card compact-home-calendar brand-calendar">
-          <div class="stack-md">
-            <div class="calendar-heading">
-              <button class="calendar-nav" type="button" aria-label="Previous month">‹</button>
-              <div class="text-center">
-                <p class="eyebrow">Practice Calendar</p>
-                <h2 id="calendar-title" class="title-lg">April 2026</h2>
-              </div>
-              <button class="calendar-nav" type="button" aria-label="Next month">›</button>
-            </div>
-
-            <div class="calendar-weekdays" id="calendar-weekdays"></div>
-            <div class="practice-calendar compact-calendar" id="practice-calendar"></div>
-            <div id="calendar-day-detail" class="calendar-day-detail body-sm">点选有记录的日期，查看当天练习。</div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <dialog id="attitude-dialog" class="dialog-shell">
-      <article class="card dialog-card">
-        <div id="plant-backdrop" class="dialog-cover"></div>
-        <div class="card-body stack-md">
-          <div class="stack-sm">
-            <p id="today-plant" class="eyebrow text-muted">今日植物</p>
-            <h2 id="today-attitude-name" class="title-lg">等待抽卡</h2>
-            <p id="today-attitude-line" class="body-sm">森林正在为你准备今天的态度卡。</p>
-          </div>
-
-          <div class="stack-md">
-            <div class="stack-xs">
-              <span class="eyebrow text-muted">一句介绍</span>
-              <p id="today-attitude-intro" class="body-sm">每一种正念态度，都可以在今天的生活里找到一个落点。</p>
-            </div>
-
-            <div class="stack-xs">
-              <span class="eyebrow text-muted">行动建议</span>
-              <p id="today-attitude-action" class="body-sm">抽卡后，这里会出现一个轻量、具体、可以立刻开始的小练习。</p>
-            </div>
-          </div>
-
-          <div class="stack-sm">
-            <label class="eyebrow text-muted" for="attitude-note">完成后的感受</label>
-            <textarea
-              id="attitude-note"
-              class="input-area"
-              rows="3"
-              placeholder="简单写一句：今天我注意到了什么？"
-            ></textarea>
-          </div>
-
-          <div class="button-grid">
-            <button id="complete-attitude" type="button" class="btn btn-primary">完成并记录，浇灌森林</button>
-            <button id="close-dialog" type="button" class="btn btn-secondary">收起卡片</button>
-          </div>
+          <button id="spin-button" class="spin-button" type="button">开始转盘</button>
         </div>
-      </article>
-    </dialog>
+
+        <div class="challenge-controls">
+          <button id="shuffle-button" class="challenge-button secondary" type="button">换一组挑战</button>
+          <button id="respin-button" class="challenge-button primary" type="button">再转一次</button>
+        </div>
+      </section>
+
+      <section id="result-card" class="result-card" aria-live="polite" hidden>
+        <p class="result-eyebrow">🎯 你的挑战是：</p>
+        <h2 id="result-title">等待抽取</h2>
+        <div class="result-action">
+          <span>具体行动：</span>
+          <p id="result-action">点击开始转盘，抽取今天的社恐挑战。</p>
+        </div>
+      </section>
+
+      <p class="safety-note">
+        挑战请注意安全、尊重他人边界，不打扰他人正常生活。如对方拒绝或表现出不适，请立刻停止并礼貌离开。
+      </p>
+    </main>
 
     <script src="./script.js"></script>
   </body>
